@@ -10,6 +10,8 @@
 #include "DeclaredFunctions.h"
 #include "FunctionCalls.h"
 #include "ASMHeader.h"
+#include "LinuxSyscalls.h"
+#include "Platform.h"
 
 using namespace std;
 
@@ -23,9 +25,9 @@ public:
 
 	static bool ParseFile(string p_sFileData);
 
-	// Compile all parsed data into ASM file
+	// Compile all parsed data into ASM string
 
-	static void CompileAllData(string p_sOutput);
+	static string CompileAllData();
 };
 
 #endif
